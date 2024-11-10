@@ -1,5 +1,5 @@
 const BaseUrl = "https://api.themoviedb.org/3/";
-const optinos = {
+const options = {
   method: "get",
   headers: {
     accept: "application/json",
@@ -12,24 +12,25 @@ const url = (urlName) => {
   return BaseUrl + `${urlName}?language=ko-kr`;
 };
 
-const genreIds = {
+export const genreIds = {
   horror: 27,
   thriller: 53,
   crime: 80,
   documentary: 99,
 };
 
-const Movies = async () => {
+export const MoviesByGenres = async (genreId) => {
   try {
     const response = await fetch(
-      url(`discover/movie`) + `&with_genres=${genreId}`,
-      optinos
+      url("discover/movie") + `&with_genres=${genreId}`,
+      options
     );
     const data = await response.json();
-    return data.results;
+    return data.results.filter((movie) => {
+      return movie.genre_ids.includes(genreId);
+    });
   } catch (error) {
-    console.log(error);
+    console.error(`Error fetching movies for genre ID ${genreId}:`, error);
+    return [];
   }
 };
-
-const 

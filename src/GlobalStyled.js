@@ -18,7 +18,7 @@ ${reset}
 
 @font-face {
   font-family: 'CurseZombie';
-  src: url('/Font/Curse of the Zombie.ttf') format('truetype');
+  src: url('/Fonts/Curse of the Zombie.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -48,14 +48,16 @@ export const MainTitle = styled.h2`
   font-weight: 300;
   font-family: "CurseZombie";
   color: #fff;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 `;
 
 export const SubTitle = styled.h3`
   font-size: 22px;
-  font-weight: 600;
+  font-weight: 400;
   font-family: "Noto Sans KR", sans-serif;
   color: #fff;
+  letter-spacing: 0.5px;
+  margin-top: 5px;
 `;
 
 export const SeeAll = styled.h4`
