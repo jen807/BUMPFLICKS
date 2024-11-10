@@ -1,4 +1,6 @@
 import { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
+import reset from "styled-reset";
 
 export const mainStyle = {
   pcPadding: "9.6%",
@@ -7,8 +9,6 @@ export const mainStyle = {
 
 export const GlobalStyled = createGlobalStyle`
 ${reset}
-
-
 
 *{
     margin: 0;

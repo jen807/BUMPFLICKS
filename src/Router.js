@@ -1,16 +1,18 @@
+import Home from "./pages/Home/Home";
+
 const { HashRouter, Routes, Route } = require("react-router-dom");
 
 const Router = () => {
   return (
     <HashRouter>
-      <Header />
+      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Search" element={<Search />} />
+        {/* <Route path="/Search" element={<Search />} />
         <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/*" element={<PageNotFound />} />
+        <Route path="/*" element={<PageNotFound />} /> */}
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </HashRouter>
   );
 };
