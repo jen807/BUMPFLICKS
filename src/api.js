@@ -34,14 +34,3 @@ export const MoviesByGenres = async (genreId) => {
     return [];
   }
 };
-
-export const RandomMovies = async () => {
-  const genres = Object.values(genreIds);
-  const randomGenres = genres[Math.floor(Math.random() * genres.length)];
-
-  const movies = await MoviesByGenres(randomGenres);
-
-  const randomMovie = movies[Math.floor(Math.random() * movies.length)];
-
-  return randomMovie;
-};
