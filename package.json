@@ -12,7 +12,6 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "cross-env": "^7.0.3",
-    "gh-pages": "^6.2.0",
     "i": "^0.3.7",
     "node-fetch": "^2.7.0",
     "npm": "^10.9.0",
