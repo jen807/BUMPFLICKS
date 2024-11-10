@@ -43,4 +43,29 @@ a{
 
 `;
 
-export const MainTitle = styled;
+export const MainTitle = styled.h2`
+  font-size: 44px;
+  font-weight: 300;
+  font-family: "CurseZombie";
+  color: #fff;
+  margin-bottom: 20px;
+`;
+
+export const SubTitle = styled.h3`
+  font-size: 22px;
+  font-weight: 600;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+`;
+
+export const SeeAll = styled.h4`
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Noto Sans KR", sans-serif;
+  color: #fff;
+`;
+
+export const Desctext = styled.p`
+  font-weight: 400;
+  font-size: 18px;
+`;
