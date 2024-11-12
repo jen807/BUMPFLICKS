@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/BUMPFLICKS/static/css/main.3c70d7db.css",
-    "main.js": "/BUMPFLICKS/static/js/main.5aa0441d.js",
+    "main.js": "/BUMPFLICKS/static/js/main.436038d2.js",
     "index.html": "/BUMPFLICKS/index.html",
     "main.3c70d7db.css.map": "/BUMPFLICKS/static/css/main.3c70d7db.css.map",
-    "main.5aa0441d.js.map": "/BUMPFLICKS/static/js/main.5aa0441d.js.map"
+    "main.436038d2.js.map": "/BUMPFLICKS/static/js/main.436038d2.js.map"
   },
   "entrypoints": [
     "static/css/main.3c70d7db.css",
-    "static/js/main.5aa0441d.js"
+    "static/js/main.436038d2.js"
   ]
 }
