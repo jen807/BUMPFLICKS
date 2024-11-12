@@ -34,3 +34,8 @@ export const MoviesByGenres = async (genreId) => {
     return [];
   }
 };
+
+export const SimillarMovies = async () => {
+  try {
+  } catch (error) {}
+};

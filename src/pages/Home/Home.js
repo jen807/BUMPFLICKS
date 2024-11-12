@@ -10,15 +10,37 @@ const Home = () => {
   const [thriller, setThriller] = useState([]);
   const [crime, setCrime] = useState([]);
   const [documentary, setDocumentary] = useState([]);
+  const [bannerMovie, setBannerMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
+  const genreMap = {
+    27: "호러",
+    53: "스릴러",
+    80: "범죄",
+    99: "다큐멘터리",
+  };
 
   useEffect(() => {
     const fetchMovies = async () => {
       try {
-        setHorror(await MoviesByGenres(genreIds.horror));
-        setThriller(await MoviesByGenres(genreIds.thriller));
-        setCrime(await MoviesByGenres(genreIds.crime));
-        setDocumentary(await MoviesByGenres(genreIds.documentary));
+        const horrorMovies = await MoviesByGenres(genreIds.horror);
+        const thrillerMovies = await MoviesByGenres(genreIds.thriller);
+        const crimeMovies = await MoviesByGenres(genreIds.crime);
+        const documentaryMovies = await MoviesByGenres(genreIds.documentary);
+
+        setHorror(horrorMovies);
+        setThriller(thrillerMovies);
+        setCrime(crimeMovies);
+        setDocumentary(documentaryMovies);
+
+        const allMovies = [
+          ...horrorMovies,
+          ...thrillerMovies,
+          ...crimeMovies,
+          ...documentaryMovies,
+        ];
+        setBannerMovie(allMovies[Math.floor(Math.random() * allMovies.length)]);
+
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -34,7 +56,7 @@ const Home = () => {
         <Loading />
       ) : (
         <>
-          <MainBanner />
+          <MainBanner movie={bannerMovie} genreMap={genreMap} />
           <Movies
             data={horror}
             genreData={genreData.find((item) => item.genreId === 27)}
