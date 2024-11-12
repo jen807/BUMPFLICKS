@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home/Home";
 
@@ -13,7 +14,7 @@ const Router = () => {
         <Route path="/detail/:id" element={<Detail />} />
         <Route path="/*" element={<PageNotFound />} /> */}
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </HashRouter>
   );
 };
