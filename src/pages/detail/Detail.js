@@ -53,7 +53,7 @@ const Content = styled.div`
 
 const Bg = styled.div`
   width: 493px;
-  height: 706px;
+  height: 800px;
   background: ${(props) =>
     props.$bgImage
       ? `url(${props.$bgImage}) no-repeat center / cover`

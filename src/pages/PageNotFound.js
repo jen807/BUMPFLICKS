@@ -28,7 +28,7 @@ const HandPrint = styled.div`
   position: absolute;
   right: 0px;
   bottom: 0px;
-  background: url('/imgs/Hand.png') no-repeat center;
+  background: url("/imgs/Hand.png") no-repeat center;
   background-size: contain;
 `;
 
@@ -36,7 +36,7 @@ const PageNotFound = () => {
   return (
     <PageWrapper>
       <Title>404</Title>
-      <Message>Sorry, We couldn't find this page</Message>
+      <Message>SORRY, WE COULDN'T FIND THIS PAGE</Message>
       <HandPrint />
     </PageWrapper>
   );

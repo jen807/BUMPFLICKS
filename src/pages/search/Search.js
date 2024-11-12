@@ -4,7 +4,7 @@ import Wrapper from "../../components/Wrapper";
 import { Link } from "react-router-dom";
 import { searchMovie, fetchRandomMoviesFromGenres } from "../../api";
 import { useState, useEffect } from "react";
-import { NO_IMG, W500 } from "../../constants/imgUrl";
+import { NO_IMG, ORIGINAL_URL, W500 } from "../../constants/imgUrl";
 import SearchIcon from "../../imgs/SearchIcon.js";
 import { genreIds } from "../../api";
 
@@ -33,7 +33,7 @@ const Form = styled.form`
 
 const IconWrapper = styled.div`
   position: absolute;
-  right: 570px;
+  left: 640px;
   top: 50%;
   transform: translateY(-50%);
 `;
@@ -63,10 +63,11 @@ const SearchResults = styled.div`
 
 const Con = styled.div`
   text-align: left;
+  margin-bottom: 50px;
 
   img {
-    width: ${(props) => (props.isSearchResult ? "363px" : "100%")};
-    height: ${(props) => (props.isSearchResult ? "519px" : "270px")};
+    width: 100%;
+    height: 100%;
     object-fit: cover;
     margin-bottom: 10px;
   }
@@ -172,7 +173,9 @@ const Search = () => {
                   <Con key={data.id} isSearchResult>
                     <Link to={`/detail/${data.id}`}>
                       <img
-                        src={data.poster_path ? W500 + data.poster_path : NO_IMG}
+                        src={
+                          data.poster_path ? W500 + data.poster_path : NO_IMG
+                        }
                         alt={data.title}
                       />
                       <h3>{data.title}</h3>
@@ -194,7 +197,7 @@ const Search = () => {
                     <img
                       src={
                         data.backdrop_path
-                          ? W500 + data.backdrop_path
+                          ? ORIGINAL_URL + data.backdrop_path
                           : NO_IMG
                       }
                       alt={data.title}

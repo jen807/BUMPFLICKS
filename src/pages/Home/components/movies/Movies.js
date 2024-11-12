@@ -92,7 +92,7 @@ const Movies = ({ data, genreData }) => {
         {data.map((movie) => (
           <SwiperSlide key={movie.id}>
             <Con to={`/detail/${movie.id}`}>
-              <img src={W500 + movie.poster_path} alt={movie.title} />g
+              <img src={W500 + movie.poster_path} alt={movie.title} />
             </Con>
           </SwiperSlide>
         ))}
