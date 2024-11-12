@@ -18,7 +18,7 @@ ${reset}
 
 @font-face {
   font-family: 'CurseZombie';
-  src: url('/Fonts/Curse of the Zombie.ttf') format('truetype');
+  src: url('./Fonts/Curse of the Zombie.ttf') format('truetype');
 }
 
 
