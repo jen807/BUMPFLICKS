@@ -16,20 +16,20 @@ ${reset}
     box-sizing: border-box;
 }
 
-@font-face {
+
+body{
+  font-family: "Noto Sans KR", sans-serif, 'CURSEZOMBIE', sans-serif;
+  letter-spacing: -1px;
+  background: linear-gradient(to bottom, #111, #270808);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  @font-face {
   font-family: 'CurseZombie';
   src: url('/Fonts/Curse of the Zombie.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
-
-body{
-    font-family: "Noto Sans KR", sans-serif;
-    letter-spacing: -1px;
-    background: linear-gradient(to bottom, #111, #270808);
-    color: #fff;
-    margin: 0;
-    padding: 0;
 }
 
 img{
