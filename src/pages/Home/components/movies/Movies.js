@@ -52,26 +52,26 @@ const Con = styled(Link)`
   }
 `;
 
-const Movies = ({ data, genreData }) => {
-  const params = {
-    spaceBetween: 20,
-    slidesPerView: 3,
-    breakpoints: {
-      1024: {
-        spaceBetween: 20,
-        slidesPerView: 3,
-      },
-      640: {
-        spaceBetween: 15,
-        slidesPerView: 2,
-      },
-      320: {
-        spaceBetween: 10,
-        slidesPerView: 1,
-      },
+const params = {
+  spaceBetween: 20,
+  slidesPerView: 3,
+  breakpoints: {
+    1024: {
+      spaceBetween: 20,
+      slidesPerView: 3,
     },
-  };
+    640: {
+      spaceBetween: 15,
+      slidesPerView: 2,
+    },
+    320: {
+      spaceBetween: 10,
+      slidesPerView: 1,
+    },
+  },
+};
 
+const Movies = ({ data, genreData }) => {
   return (
     <MainContainer>
       <TitleWrap>

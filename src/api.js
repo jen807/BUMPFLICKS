@@ -35,7 +35,16 @@ export const MoviesByGenres = async (genreId) => {
   }
 };
 
-export const SimillarMovies = async () => {
+export const SimillarMovies = async (movie_id) => {
   try {
-  } catch (error) {}
+    const response = await fetch(
+      `${BaseUrl}movie/${movie_id}/similar?language=ko-kr`,
+      options
+    );
+
+    const data = await response.json();
+    return data.results;
+  } catch (error) {
+    console.log(error);
+  }
 };
