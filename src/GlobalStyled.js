@@ -44,7 +44,7 @@ a{
 `;
 
 export const MainTitle = styled.h2`
-  font-size: 44px;
+  font-size: 46px;
   font-weight: 300;
   font-family: "CurseZombie";
   color: #fff;
@@ -52,10 +52,11 @@ export const MainTitle = styled.h2`
 `;
 
 export const SubTitle = styled.h3`
-  font-size: 22px;
+  font-size: 18px;
   font-weight: 400;
   font-family: "Noto Sans KR", sans-serif;
   color: #fff;
+  opacity: 0.8;
   letter-spacing: 0.5px;
   margin-top: 5px;
 `;

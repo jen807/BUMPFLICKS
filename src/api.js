@@ -57,3 +57,18 @@ export const searchMovie = (keyword) => {
     BaseUrl + `search/movie?query=${keyword}&include_adult=true&language=ko-kr`;
   return fetch(searchUrl, options).then((res) => res.json());
 };
+
+export const fetchRandomMoviesFromGenres = async () => {
+  try {
+    const genreKeys = Object.values(genreIds);
+    let allMovies = [];
+    for (let genreId of genreKeys) {
+      const movies = await MoviesByGenres(genreId);
+      allMovies = [...allMovies, ...movies];
+    }
+    return allMovies.sort(() => 0.5 - Math.random()).slice(0, 3);
+  } catch (error) {
+    console.error("Error fetching random movies from genres:", error);
+    return [];
+  }
+};

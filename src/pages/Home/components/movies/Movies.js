@@ -28,18 +28,6 @@ const TitleWrap = styled.div`
   align-items: flex-start;
   justify-content: space-between;
 `;
-const Titles = styled.div`
-  margin-bottom: 20px;
-`;
-const SeeAllContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 40px;
-`;
-// const Line = styled.img`
-//   width: 215px;
-//   height: auto;
-// `;
 
 const Con = styled(Link)`
   display: block;
@@ -50,6 +38,20 @@ const Con = styled(Link)`
     height: 100%;
     object-fit: cover;
   }
+`;
+
+const Titles = styled.div`
+  margin-bottom: 20px;
+`;
+// const Line = styled.img`
+//   width: 215px;
+//   height: auto;
+// `;
+const SeeAllContainer = styled(Link)`
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  text-decoration: none;
 `;
 
 const params = {
@@ -79,6 +81,7 @@ const Movies = ({ data, genreData }) => {
           <MainTitle>#{genreData.genre}</MainTitle>
           <SubTitle>{genreData.desc1}</SubTitle>
           <SubTitle>{genreData.desc2}</SubTitle>
+          <SubTitle>{genreData.desc3}</SubTitle>
         </Titles>
         <SeeAllContainer to={`/genre/${genreData.genreId}`}>
           <SeeAll>See All</SeeAll>
