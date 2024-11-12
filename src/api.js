@@ -35,6 +35,9 @@ export const MoviesByGenres = async (genreId) => {
   }
 };
 
+export const movieDetail = (id) =>
+  fetch(url(`movie/${id}`), options).then((res) => res.json());
+
 export const SimillarMovies = async (movie_id) => {
   try {
     const response = await fetch(

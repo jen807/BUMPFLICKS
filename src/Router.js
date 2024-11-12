@@ -1,6 +1,7 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Home from "./pages/Home/Home";
+import Detail from "./pages/detail/Detail";
 
 const { HashRouter, Routes, Route } = require("react-router-dom");
 
@@ -10,9 +11,9 @@ const Router = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/Search" element={<Search />} />
+        {/* <Route path="/Search" element={<Search />} /> */}
         <Route path="/detail/:id" element={<Detail />} />
-        <Route path="/*" element={<PageNotFound />} /> */}
+        {/* <Route path="/*" element={<PageNotFound />} /> */}
       </Routes>
       <Footer />
     </HashRouter>

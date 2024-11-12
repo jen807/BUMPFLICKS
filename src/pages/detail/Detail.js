@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { movieDtail } from "../../api";
 import styled from "styled-components";
-import { NO_IMG, ORIGINAL_URL } from "../../constant/imgUrl";
-import PageTitle from "../../components/PageTitle";
-import Wrapper from "../../components/Wrapper";
+import { NO_IMG, ORIGINAL_URL } from "../../constants/imgUrl";
+// import PageTitle from "../../components/PageTitle";
 import useScrollTop from "../../lib/useScrollTop";
 import Loading from "../../components/Loading";
+import Wrapper from "../../components/Wrapper";
+import { movieDetail } from "../../api";
 
 const Container = styled.div`
   display: flex;
@@ -69,8 +69,9 @@ const Detail = () => {
   useEffect(() => {
     (async () => {
       try {
-        const detailData = await movieDtail(id);
+        const detailData = await movieDetail(id);
         setData(detailData);
+
         setIsLoading(false);
       } catch (error) {
         console.log(error);
@@ -84,8 +85,8 @@ const Detail = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <>
-          <PageTitle title={data.title} />
+        <div>
+          {/* <PageTitle title={data.title} /> */}
           <Wrapper>
             <Container>
               <Bg
@@ -99,15 +100,17 @@ const Detail = () => {
                 <span>{data.runtime}분</span>
                 <span>개봉 {data.release_date}</span>
                 <ul>
-                  {data.genres.map((genre) => (
+                  {/* {data.genres.map((genre) => (
                     <li key={genre.id}>{genre.name}</li>
-                  ))}
+                  ))} */}
+
+                  {/* => map erros */}
                 </ul>
                 <p>{data.overview}</p>
               </TitleWrap>
             </Container>
           </Wrapper>
-        </>
+        </div>
       )}
     </>
   );

@@ -6,10 +6,10 @@ import { genreData } from "./components/movies/moviesData/movieData";
 import Loading from "../../components/Loading";
 
 const Home = () => {
-  const [horror, setHorror] = useState([]);
-  const [thriller, setThriller] = useState([]);
-  const [crime, setCrime] = useState([]);
-  const [documentary, setDocumentary] = useState([]);
+  const [horror, setHorror] = useState();
+  const [thriller, setThriller] = useState();
+  const [crime, setCrime] = useState();
+  const [documentary, setDocumentary] = useState();
   const [bannerMovie, setBannerMovie] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -56,23 +56,27 @@ const Home = () => {
         <Loading />
       ) : (
         <>
-          <MainBanner movie={bannerMovie} genreMap={genreMap} />
-          <Movies
-            data={horror}
-            genreData={genreData.find((item) => item.genreId === 27)}
-          />
-          <Movies
-            data={thriller}
-            genreData={genreData.find((item) => item.genreId === 53)}
-          />
-          <Movies
-            data={crime}
-            genreData={genreData.find((item) => item.genreId === 80)}
-          />
-          <Movies
-            data={documentary}
-            genreData={genreData.find((item) => item.genreId === 99)}
-          />
+          {genreData && (
+            <div>
+              <MainBanner movie={bannerMovie} genreMap={genreMap} />
+              <Movies
+                data={horror}
+                genreData={genreData.find((item) => item.genreId === 27)}
+              />
+              <Movies
+                data={thriller}
+                genreData={genreData.find((item) => item.genreId === 53)}
+              />
+              <Movies
+                data={crime}
+                genreData={genreData.find((item) => item.genreId === 80)}
+              />
+              <Movies
+                data={documentary}
+                genreData={genreData.find((item) => item.genreId === 99)}
+              />
+            </div>
+          )}
         </>
       )}
     </div>
