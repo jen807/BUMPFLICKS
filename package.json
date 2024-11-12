@@ -35,7 +35,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://jen807.github.io/BUMPFLICKS",
+  "homepage": "https://jen807.github.io/BUMPFLICKS/#/",
   "eslintConfig": {
     "extends": [
       "react-app",
