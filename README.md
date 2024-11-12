@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# BUMPFLICKS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 URL
 
-## Available Scripts
+[https://jen807.github.io/BUMPFLICKS/#/](https://jen807.github.io/BUMPFLICKS/#/)
 
-In the project directory, you can run:
+## 목적
 
-### `npm start`
+무서운 영화, 범죄 영화, 스릴러 영화, 다큐 영화들을 마음껏 보면서
+함께 소름돋을 수 있는 영화들을 추천해주는 앱입니다.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 기술 스택
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- JS
+- React
+- Node.js
+- Git
+- GitHub
+- CSS
+- HTML
 
-### `npm test`
+## 개발 기간
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+11월 7일 - 11월 13일 (7일)
 
-### `npm run build`
+## 구현 기능
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- 장르별 영화 목록
+- 앱 구성 장르 중 랜덤 영화 추천
+- 검색 시 영화 추천
+- 영화 검색
+- 영화 검색 시 장르별 구분
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 지원 디바이스
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- PC
 
-### `npm run eject`
+## 폰트
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- 헤딩: "CurseZombie", sans-serif
+- 본문: "Noto Sans KR", sans-serif
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 프로젝트 진행 중 새로 알게 된 내용
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- **hook을 직접 만들어서 사용하기**: 별점 매기는 방식을 직접 훅으로 만들어서 사용했더니, 편리하고 효율적이었습니다. 수업시간에 scrolltop 훅을 만들어서 사용했지만 직접 만들어보니 색다른 경험이고, 앞으로도 복잡한 작업들을 직접 hook으로 만들어서 사용해도 좋을 것 같았습니다.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## 프로젝트 진행하면서 느낀점
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **ChatGPT에 너무 의존하지 말자**: 챗지피티는 정말 유용하고 좋은 ai도구이지만, 무작정 사용하였을때 자신의 발전이 더뎌지고 의존성이 높아진다는 사실을 알았습니다. 자신이 알고 효율적으로 써야 저의 좋은 도구가 될 수 있다는 것을 깨닫고 프로젝트 중간에 처음부터 다시 시작하였습니다.
+- **항상 최악의 상황에도 대비하자**: 위의 상황처럼 프로젝트 중간에 다시 시작했을때의 대비책이나 스케일을 줄여나가는 상황이 생길 수도 있다는 것을 느꼈습니다. 항상 기획을 세울때 처음부터 탄탄하게, 최악의 상황을 대비한 차선책도 만들어두어야 한다는 것을 느끼는 좋은 계기가 되었습니다.
+- **절대 포기하지 말자**: 중간중간 쉬어가는 시간, 달리는 시간을 적절히 배분하여 포기하지 않는 법을 배우게 되었습니다. 힘들고, 지치고 그만두고 싶어도 포기하지 않고 끝까지 도전하면, 비록 지금은 성에 차지 않지만 이런 결과물을 만들어 낼 수도 있다는 것을 알았습니다. 포기하면 아무것도 완성되지 않고 발전하지 않습니다. 항상 이 마음가짐을 느끼며 다음 포트폴리오에서 더 성장한 나 자신의 모습을 기대하게 되었습니다.
