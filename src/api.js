@@ -51,3 +51,9 @@ export const SimillarMovies = async (movie_id) => {
     console.log(error);
   }
 };
+
+export const searchMovie = (keyword) => {
+  const searchUrl =
+    BaseUrl + `search/movie?query=${keyword}&include_adult=true&language=ko-kr`;
+  return fetch(searchUrl, options).then((res) => res.json());
+};
